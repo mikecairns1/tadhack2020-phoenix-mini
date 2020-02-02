@@ -1,0 +1,17 @@
+Food Demand Flow
+1.	I plan to start the flow with a Text message, email or a call from the person in need to declare that they need food.  Like grubhub for the hungry, but for free.
+2.	All requests will be in a FIFO queue with a timer for a secondary contact
+3.	All timeout requests will go to secondary contact such as a food bank, animal shelter
+
+Food Supply Flow
+1. Take a picture of a food surplus and send it to the app via text message or a web interface
+2. Assign a timeframe that food demand can be picked up and location via chatbot
+
+How would you determine the GPS location of the person in need?
+My thought is to have a web-based chatbot that requests location from a mobile browser (if available) otherwise prompting the user for address or zip code.
+
+Would they talk to the bot and provide their address or something else?
+Yes, if it can’t be collected by browser.
+
+Once you have the GPS location/address from the person, you would use a Webhook in Dialogflow to call the Google Maps API.
+That helps.  I plan to also send timing texts to let them know that they must pick up the food within X amount of time to make sure that someone gets the food that urgently needs it.
